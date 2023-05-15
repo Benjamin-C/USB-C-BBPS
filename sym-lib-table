@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "usb-breadboard")(type "KiCad")(uri "${KIPRJMOD}/usb-breadboard.kicad_sym")(options "")(descr ""))
+)

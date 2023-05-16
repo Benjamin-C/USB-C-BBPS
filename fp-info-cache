@@ -1,4 +1,4 @@
-21465454323245431
+21468822870860100
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -89340,6 +89340,20 @@ varistor
 0
 2
 2
+usb-breadboard
+J- Amphenol-USB-C
+10164359-00011LF-1
+Connector
+0
+10
+10
+usb-breadboard
+J-Amphenol-USB-C
+10164359-00011LF-1
+Connector
+0
+10
+10
 usb-breadboard
 usbc
 

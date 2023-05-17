@@ -1,0 +1,6 @@
+usb-breadboard-power-backups/
+*.csv
+datasheet/
+*.kicad_prl
+fp-info-cache
+usb-breadboard-power.xml

@@ -143,7 +143,7 @@
       )
       (pin input line (at -15.24 11.43 0) (length 2.54)
         (name "VBUS_IN" (effects (font (size 1.27 1.27))))
-        (number "17" (effects (font (size 1.27 1.27))))
+        (number "18" (effects (font (size 1.27 1.27))))
       )
       (pin input line (at -15.24 -16.51 0) (length 2.54)
         (name "GND" (effects (font (size 1.27 1.27))))

@@ -6,8 +6,8 @@
 
   (title_block
     (title "USB-C Breadboard Power Supply")
-    (date "2023-05-16")
-    (rev "v1")
+    (date "2023-06-08")
+    (rev "v1.0")
     (company "Benjamin Crall")
   )
 

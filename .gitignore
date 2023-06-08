@@ -1,8 +1,8 @@
 usb-breadboard-power-backups/
-*.csv
 datasheet/
 *.kicad_prl
-fp-info-cache
+fp-*
 usb-breadboard-power.xml
 notes/
 bom/
+sym-lib-table

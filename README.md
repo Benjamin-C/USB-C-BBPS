@@ -1,11 +1,18 @@
-# USB-C-BBPS
+# USBC-BBPS
 A USBC-PD powered breadboard power supply with selectable voltage outputs. This lets you power your project with 3.3V and/or a voltage of your choice provided by a USBC Power Delivery capable power supply.
 
 ![Front render](https://github.com/Benjamin-C/USB-C-BBPS/blob/main/graphics/v1.0-render-front.png?raw=true)
 ![Front render](https://github.com/Benjamin-C/USB-C-BBPS/blob/main/graphics/v1.0-render-back.png?raw=true)
 
+
+## Major Features
+* A [CYPD3177-24LQXQT](https://www.infineon.com/cms/en/product/universal-serial-bus/usb-c-charging-port-controllers/ez-pd-barrel-connector-replacement-bcr/cypd3177-24lqxqt/) USBC PD Interface IC to supporting PD3.0 Revision 2.0 Version 1.3
+* A [AP63203WU](https://www.mouser.com/ProductDetail/Diodes-Incorporated/AP63203WU-7?qs=u16ybLDytRZ1JqxbuLkMJw%3D%3D) 3.3V switching regulator to always have 3.3V available for microcontrollers
+* An [LM339PWRG4](https://www.ti.com/product/LM339/part-details/LM339PWRG4) based voltage monitor
+* 2x2 0.1" Pin headers spaced to fit standard solderless breadboards
+
 ## Ratings
-* VBUS has a 1.5A polyfuse, so no more than 1.5A may be drawn between the VBUS output and 3.3V regulator.
+* VBUS has a 1.5A polyfuse, so no more than 1.5A may be drawn between the VBUS output and 3.3V regulator (noting that the current drawn by the regulator from VBUS will be less than the current drawn on 3.3V).
 * Do not feed power back into either 3.3V or VBUS. Doing so may kill the board or possibly the USB power supply
 * Each side of the board has a maximum of 1A. This is not regulated on the board, so don't draw more than that.
 
@@ -24,11 +31,12 @@ A USBC-PD powered breadboard power supply with selectable voltage outputs. This 
 ### Output Voltage Selection
 * Use the 3-pin jumpers on each side of the board to select the voltage output to that side of the breadboard.
 * Each side can be independently selected to be 3.3V or VBUS.
-* Only 1 VBUS value may be used at a time.
-* For any voltage over 5V, one or more of the output voltage monitoring LEDs will be lit. The current output voltage is the highest value with a lit LED.
+* Only 1 VBUS voltage may be used at a time, but it may be used on both sides of the board.
+* For any voltage over 5V, one or more of the output voltage monitoring LEDs will be lit. The output voltage is the highest value with a lit LED.
+* Power will only be provided to the board once USBC-PD negotiations have completed and the desired voltage has been provided.
 
 ### Errors
-* If the board is not able to negotiate at least the desired voltage from the upstream power supply, the outputs will be turned off and the fault LED will be turned on.
+* If the board is not able to negotiate at least the desired voltage from the upstream power supply, the outputs will be turned off and the fault LED will be turned on and power will be cut from the board.
 * If the polyfuse is tripped, all lights on the board will turn off. To reset the polyfuse, turn disconnect power from the board, remove the cause of the over current event, and return power to the board.
 * If there is a larger over current event, the protection in the USBC power supply may be triggered before the polyfuse reacts. To fix this, disconnect power from the board, remove the source of the nonrecurrent event, then reconnect power to the board.
 * If the 3.3V light and voltage monitoring lights are blinking but the VBUS light is on, this is an indication that the 3.3V regulator may be damaged and require replacement.

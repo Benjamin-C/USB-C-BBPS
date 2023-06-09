@@ -1,6 +1,9 @@
 # USB-C-BBPS
 A USBC-PD powered breadboard power supply with selectable voltage outputs. This lets you power your project with 3.3V and/or a voltage of your choice provided by a USBC Power Delivery capable power supply.
 
+![Front render](https://github.com/Benjamin-C/USB-C-BBPS/blob/main/graphics/v1.0-render-front.png?raw=true)
+![Front render](https://github.com/Benjamin-C/USB-C-BBPS/blob/main/graphics/v1.0-render-back.png?raw=true)
+
 ## Ratings
 * VBUS has a 1.5A polyfuse, so no more than 1.5A may be drawn between the VBUS output and 3.3V regulator.
 * Do not feed power back into either 3.3V or VBUS. Doing so may kill the board or possibly the USB power supply
